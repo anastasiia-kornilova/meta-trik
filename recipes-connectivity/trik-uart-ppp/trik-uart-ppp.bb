@@ -12,4 +12,8 @@ do_compile() {
 	:
 }
 do_install() {
+	install -m 0755 -D -t ${D}/${sysconfdir}/trik/ ${WORKDIR}/init_tty.sh ${WORKDIR}/autologin
+	
+	install -d ${D}/${sysconfdir}/trik/ppp
+	install -m 0644 ${WORKDIR}/winclient.chat ${D}/${sysconfdir}/trik/ppp
 }
