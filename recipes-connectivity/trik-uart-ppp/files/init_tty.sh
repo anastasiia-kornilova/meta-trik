@@ -19,7 +19,7 @@ baudrate=115200
 echo_en="echo -en"
 
 login() {
-  getty -L $device $baudrate -n -l /home/root/trik/autologin
+  getty -L $device $baudrate -n -l /etc/trik/autologin
 }
 
 start_pppd() {
