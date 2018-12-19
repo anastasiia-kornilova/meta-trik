@@ -7,12 +7,6 @@ SRC_URI="file://init_tty.sh \
          file://autologin \
          file://LICENSE"
 
-do_configure() {
-   :
-}
-do_compile() {
-	:
-}
 do_install() {
 	install -m 0755 -D -t ${D}/${sysconfdir}/trik/ ${WORKDIR}/init_tty.sh ${WORKDIR}/autologin
 	
